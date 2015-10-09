@@ -1,0 +1,8 @@
+/*@import 'normalize.css/normalize';
+
+@import '../components/Type/Type.css';*/
+
+
+html {
+    background: red;
+}

@@ -41,7 +41,7 @@ var common = {
               }),
               postcssNested(),
               postcssRucksack(),
-              postcssLost(),
+              postcssLost()
         ];
     },
     plugins: [
