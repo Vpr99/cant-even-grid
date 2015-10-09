@@ -23,6 +23,7 @@
     "html-webpack-plugin": "^1.6.2",
     "lost": "^6.6.2",
     "normalize.css": "^3.0.3",
+    "open-browser-webpack-plugin": "0.0.1",
     "postcss-import": "^7.0.0",
     "postcss-loader": "^0.6.0",
     "postcss-nested": "^1.0.0",
