@@ -1,7 +1,8 @@
 var HtmlwebpackPlugin = require('html-webpack-plugin'),
     merge = require('webpack-merge'),
     path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 /* PostCSS Plugins */
 var postcssImport = require('postcss-import'),
@@ -48,7 +49,8 @@ var common = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlwebpackPlugin({
             title: 'Grid Prototyping App'
-        })
+        }),
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
     ]
 }
 
