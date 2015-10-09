@@ -11,7 +11,6 @@ import Dialogs from './components/Dialogs/Dialogs';
 import Helpers from './components/Helpers/Helpers';
 import NotFound from './components/NotFound/NotFound';
 
-
 let routeConfig = [
   { path: '/',
     component: App,
