@@ -6,7 +6,7 @@ var HtmlwebpackPlugin = require('html-webpack-plugin'),
 /* PostCSS Plugins */
 var postcssImport = require('postcss-import'),
     postcssNested = require('postcss-nested'),
-    postcssLost = require('lost-grid'),
+    postcssLost = require('lost'),
     postcssRucksack = require('rucksack-css');
 
 var TARGET = process.env.npm_lifecycle_event;
