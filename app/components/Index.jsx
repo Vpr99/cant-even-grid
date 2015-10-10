@@ -1,9 +1,12 @@
 import React from 'react';
+import { Router, Route, Link } from 'react-router';
 
 export default class Index extends React.Component {
     render() {
         return(
-            <h1>Forms</h1>
+            <div>
+                <h1>Index</h1>
+            </div>
         )
     }
 }

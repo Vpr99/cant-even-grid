@@ -1,6 +1,6 @@
 import App from './components/App';
 
-import ViewList from './components/ViewList/ViewList';
+import Index from './components/Index';
 import Grid from './components/Grid/Grid';
 import Forms from './components/Forms/Forms';
 import Typography from './components/Typography/Typography';
@@ -14,7 +14,7 @@ import NotFound from './components/NotFound/NotFound';
 let routeConfig = [
   { path: '/',
     component: App,
-    indexRoute: { component: ViewList },
+    indexRoute: { component: Index },
     childRoutes: [
         { path: '/typography', component: Typography },
         { path: '/forms', component: Forms },
