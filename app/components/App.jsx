@@ -5,9 +5,11 @@ import AppNavigation from './AppNavigation';
 let App = React.createClass({
     render() {
         return (
-            <div className="container">
+            <div className="App">
                 <AppNavigation />
-                {this.props.children}
+                <div className="Detail">
+                    {this.props.children}
+                </div>
             </div>
         );
     }

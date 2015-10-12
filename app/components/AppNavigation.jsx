@@ -5,7 +5,8 @@ export default class AppNavigation extends React.Component {
     render() {
         return(
             <div>
-                <ul>
+                <ul className="AppNavigation">
+                    <li><Link to="/">Index</Link></li>
                     <li><Link to="/grid">Grid</Link></li>
                     <li><Link to="/navigation">Navigation</Link></li>
                     <li><Link to="/tables">Tables</Link></li>
