@@ -1,24 +1,21 @@
-@lost gutter 0px;
-
 li{
-    lost-row: 1/8;
     position: relative;
+    float: left;
+    width: 100%;
+    display: block;
 }
 a {
+    display: block;
+    width: 100%;
+    padding: 6% 10%;
     font-size: responsive 0.7rem 1rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 1rem 0;
     color: slategray;
     text-decoration: none;
-    background: #eee;
-
 
     &:hover{
         color: #444;
-        background: #ddd;
+        background: #eee;
     }
 }
