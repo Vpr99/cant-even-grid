@@ -1,15 +1,15 @@
 import App from './components/App';
 
-import Index from './components/Index';
+import Index from './components/Index/Index';
 import Grid from './components/Grid/Grid';
-import Forms from './components/Forms/Forms';
 import Typography from './components/Typography/Typography';
 import Navigation from './components/Navigation/Navigation';
+import Forms from './components/Forms/Forms';
 import Tables from './components/Tables/Tables';
 import Lists from './components/Lists/Lists';
 import Dialogs from './components/Dialogs/Dialogs';
 import Helpers from './components/Helpers/Helpers';
-import NotFound from './components/NotFound/NotFound';
+import NotFound404 from './components/NotFound404/NotFound404';
 
 let routeConfig = [
   { path: '/',
@@ -24,7 +24,7 @@ let routeConfig = [
         { path: '/lists', component: Lists },
         { path: '/dialogs', component: Dialogs },
         { path: '/helpers', component: Helpers },
-        { path: '*', component: NotFound }
+        { path: '*', component: NotFound404 }
     ]
   }
 ]

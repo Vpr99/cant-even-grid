@@ -7,7 +7,7 @@
 @import '../components/Typography/Typography.css';
 @import '../components/Tables/Tables.css';
 @import '../components/Helpers/Helpers.css';
-@import '../components/NotFound/NotFound.css';
+@import '../components/NotFound404/NotFound404.css';
 
 *{
     box-sizing: border-box;
