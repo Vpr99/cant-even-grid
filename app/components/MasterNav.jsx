@@ -1,11 +1,11 @@
 import React from 'react';
 import { Router, Route, Link } from 'react-router';
 
-export default class AppNavigation extends React.Component {
+export default class MasterNav extends React.Component {
     render() {
         return(
             <div>
-                <ul className="AppNavigation">
+                <ul className="MasterNav">
                     <li><Link to="/">Index</Link></li>
                     <li><Link to="/grid">Grid</Link></li>
                     <li><Link to="/navigation">Navigation</Link></li>

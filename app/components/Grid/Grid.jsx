@@ -5,19 +5,19 @@ export default class Grid extends React.Component {
         return(
             <div>
                 <h1>Grid</h1>
-                    <section className="container">
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
-                        <div className="column"></div>
+                    <section className="grid-one">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </section>
             </div>
 

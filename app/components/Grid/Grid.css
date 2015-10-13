@@ -1,18 +1,30 @@
-@lost gutter 30px;
-@lost cycle none;
+
 
 $grid-columns: 12;
 
-.container{
+.MasterDetailGrid{
+    @lost gutter 0;
+    @lost cycle auto;
     lost-utility: clearfix;
     float: left;
     width: 100%;
 }
+.MasterNav{
+    lost-column: 2/9 0;
+}
+.Detail{
+    lost-column: 7/9 0;
+}
 
-.column{
-    background: orange;
-    opacity: 0.6;
-    width: 100%;
-    lost-column: 1/12;
-    padding: 3px;
+.grid-one{
+    @lost gutter 0;
+    lost-utility: clearfix;
+
+    div{
+        background: orange;
+        opacity: 0.6;
+        width: 100%;
+        lost-column: 1/12;
+        padding: 3px;
+    }
 }

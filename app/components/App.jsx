@@ -1,15 +1,17 @@
 import React from 'react';
 import { IndexRoute, Router, Route } from 'react-router'
-import AppNavigation from './AppNavigation';
+import MasterNav from './MasterNav';
 
 let App = React.createClass({
     render() {
         return (
             <div className="App">
-                <AppNavigation />
-                <div className="Detail">
-                    {this.props.children}
-                </div>
+                <section className="MasterDetailGrid">
+                    <MasterNav />
+                    <div className="Detail">
+                        {this.props.children}
+                    </div>
+                </section>
             </div>
         );
     }
