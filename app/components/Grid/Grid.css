@@ -3,22 +3,16 @@
 
 $grid-columns: 12;
 
-html { }
-
-.GridContainer{
+.container{
+    lost-utility: clearfix;
     float: left;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    lost-utility: clearfix;
+}
 
-    .column{
-        background: tan;
-        width: 100%;
-        lost-column: 1/12;
-        padding: 3px;
-    }
+.column{
+    background: orange;
+    opacity: 0.6;
+    width: 100%;
+    lost-column: 1/12;
+    padding: 3px;
 }
