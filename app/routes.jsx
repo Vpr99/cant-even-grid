@@ -1,5 +1,4 @@
 import App from './components/App';
-
 import Index from './components/Index/Index';
 import Grid from './components/Grid/Grid';
 import Typography from './components/Typography/Typography';
