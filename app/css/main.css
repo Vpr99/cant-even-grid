@@ -34,6 +34,29 @@ html, body {
     width: 20vw;
     margin: 0;
     padding: 0;
+
+    li{
+        position: relative;
+        float: left;
+        width: 100%;
+        display: block;
+    }
+    a {
+        display: block;
+        width: 100%;
+        padding: 6% 10%;
+        font-size: responsive 0.7rem 1rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        color: slategray;
+        text-decoration: none;
+
+        &:hover{
+            color: #444;
+            background: #eee;
+        }
+    }
+
 }
 .Detail{
     float: left;

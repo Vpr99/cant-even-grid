@@ -14,8 +14,7 @@ var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 
 var common = {
-
-    entry: path.resolve(ROOT_PATH, 'app/main.jsx'),
+    entry: path.resolve(ROOT_PATH, 'app/main'),
     output: {
         path: path.resolve(ROOT_PATH, 'build'),
         filename: '/bundle.js'
@@ -31,7 +30,7 @@ var common = {
     },
     resolve: {
         /* Resolves extensions to require('file') instead of require('file.js') */
-        extensions: ['', '.js', '.jsx', '.json', '.coffee']
+        extensions: ['', '.js', '.jsx', '.json']
     },
     postcss: function () {
         return [
@@ -61,19 +60,18 @@ if(TARGET === 'start' || !TARGET) {
             loaders: [
                 {
                     test: /\.jsx?$/,
-                    loaders: ['react-hot', 'babel?stage=1'],
+                    loaders: ['babel'],
                     include: path.resolve(ROOT_PATH, 'app')
                 }
             ]
         },
         devServer: {
             historyApiFallback: true,
-            hot: true,
             inline: true,
             progress: true
         },
         plugins: [
-            new webpack.HotModuleReplacementPlugin()
+
         ]
     });
 }
