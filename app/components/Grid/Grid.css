@@ -17,7 +17,7 @@ $grid-columns: 12;
 }
 
 .grid-one{
-    @lost gutter 0;
+    @lost gutter 20;
     lost-utility: clearfix;
 
     div{
