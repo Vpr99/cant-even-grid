@@ -4,7 +4,6 @@ import { Router, Route, Link } from 'react-router';
 export default class MasterNav extends React.Component {
     render() {
         return(
-            <div>
                 <ul className="MasterNav">
                     <li><Link to="/">Index</Link></li>
                     <li><Link to="/grid">Grid</Link></li>
@@ -16,7 +15,6 @@ export default class MasterNav extends React.Component {
                     <li><Link to="/helpers">Helpers</Link></li>
                     <li><Link to="/forms">Forms</Link></li>
                 </ul>
-            </div>
         )
     }
 }

@@ -1,6 +1,8 @@
 var HtmlwebpackPlugin = require('html-webpack-plugin'),
     merge = require('webpack-merge'),
     path = require('path'),
+    _ = require('lodash'),,
+    range = require('lodash/range'),
     webpack = require('webpack'),
     OpenBrowserPlugin = require('open-browser-webpack-plugin');
 

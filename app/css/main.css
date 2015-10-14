@@ -9,12 +9,15 @@
 @import '../components/Helpers/Helpers.css';
 @import '../components/NotFound404/NotFound404.css';
 
+$homedepotcolor: #FF7D32;
+
 *{
     box-sizing: border-box;
 }
 html, body {
     height: 100vh;
     width: 100vw;
+
 }
 
 h1{
@@ -31,15 +34,19 @@ h1{
     margin: 0;
     padding: 0;
     list-style-type: none;
+    background-color: rgba(255,255,255,0.8);
+
+    li > a{
+        opacity: 0.6;
+    }
 
     &:hover li a{
-        opacity: 0.4;
+        opacity: 1;
     }
 
     a {
         display: block;
-        width: 100%;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.675rem;
         font-size: responsive 0.7rem 1rem;
         font-weight: 500;
         letter-spacing: 0.05rem;
@@ -52,8 +59,40 @@ h1{
             background: #eee;
             opacity: 1 !important;
         }
-
-
     }
-
 }
+
+
+
+.demo1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .demo1-ball {
+    border-radius: 99px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    pointer-events: none;
+  }
+  .ball-0 {
+    background-color: violet;
+  }
+  .ball-1 {
+    background-color: orange;
+  }
+  .ball-2 {
+    background-color: green;
+  }
+  .ball-3 {
+    background-color: yellow;
+  }
+  .ball-4 {
+    background-color: blue;
+  }
+  .ball-5 {
+    background-color: red;
+  }
