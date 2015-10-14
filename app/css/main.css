@@ -17,6 +17,11 @@ html, body {
     width: 100vw;
 }
 
+h1{
+    font-size: 4rem;
+    font-weight: 100;
+}
+
 .App{
 
 }
@@ -27,6 +32,9 @@ html, body {
     padding: 0;
     list-style-type: none;
 
+    &:hover li a{
+        opacity: 0.4;
+    }
 
     a {
         display: block;
@@ -37,11 +45,14 @@ html, body {
         letter-spacing: 0.05rem;
         color: #222;
         text-decoration: none;
+        transition: all 0.2s cubic-bezier(.27,.19,.36,.99);
 
         &:hover{
             color: #444;
             background: #eee;
+            opacity: 1 !important;
         }
+
 
     }
 
