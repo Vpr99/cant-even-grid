@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import { IndexRoute, Router, Route } from 'react-router'
-import MasterNav from './MasterNav';
+import { Motion, spring } from 'react-motion'
+import MasterNav from './MasterNav'
 
 let App = React.createClass({
     render() {
@@ -12,7 +13,17 @@ let App = React.createClass({
                         {this.props.children}
                     </div>
                 </section>
+                <Motion
+                    defaultStyle={{x: 0}}
+                    style={{x: spring(10)}}>
+                    {value =>
+                        <div>
+                            {value.x}
+                        </div>
+                    }
+                </Motion>
             </div>
+
         );
     }
 });
