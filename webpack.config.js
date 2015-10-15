@@ -24,7 +24,7 @@ var common = {
     module: {
         loaders: [
             {
-                test: /\.css$/,/\.css$/,
+                test: /\.css$/,
                 loader: "style-loader!css-loader?minimize!postcss-loader",
                 include: path.resolve(ROOT_PATH, 'app')
             }
@@ -63,7 +63,7 @@ if(TARGET === 'start' || !TARGET) {
         module: {
             loaders: [
                 {
-                    test: /\.jsx?$/,/\.jsx?$/,
+                    test: /\.jsx?$/,
                     loaders: ['babel'],
                     include: path.resolve(ROOT_PATH, 'app')
                 }
