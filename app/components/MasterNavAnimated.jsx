@@ -68,26 +68,22 @@ const MasterNavAnimated = React.createClass({
   render() {
     const {pages, value, selected} = this.state;
     return (
-      <section className="MasterNav">
-        <section className="main">
           <TransitionMotion defaultStyles={this.getDefaultValue()} styles={this.getEndValue()} willLeave={this.willLeave}
             willEnter={this.willEnter}>
             {configs =>
               <ul className="MasterNav">
                 {Object.keys(configs).map(id => {
                     const config = configs[id];
-                    const {data: {title},  ...style} = config;
+                    const {data: {title, url},  ...style} = config;
                   return (
                     <li key={id} style={style}>
-                      <Link to="/">{title}</Link>
+                      <Link to={url}>{title}</Link>
                     </li>
                   );
                 })}
               </ul>
             }
           </TransitionMotion>
-        </section>
-      </section>
     );
   },
 });
