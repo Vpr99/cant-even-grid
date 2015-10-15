@@ -1,16 +1,13 @@
 import React from 'react'
 import { IndexRoute, Router, Route } from 'react-router'
-import MasterNavAnimated from './MasterNavAnimated'
-import Demo from './Demo'
-import Demo2 from './Demo2'
+import MasterNavAnimated2 from './MasterNavAnimated2'
 
 let App = React.createClass({
     render() {
         return (
             <div className="App">
-                <Demo />
                 <section className="MasterDetailGrid">
-                    <MasterNavAnimated />
+                    <MasterNavAnimated2 />
                     <div className="Detail">
                         {this.props.children}
                     </div>
