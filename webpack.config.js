@@ -1,16 +1,16 @@
 var HtmlwebpackPlugin = require('html-webpack-plugin'),
-merge = require('webpack-merge'),
-path = require('path'),
-webpack = require('webpack'),
-OpenBrowserPlugin = require('open-browser-webpack-plugin');
+    merge             = require('webpack-merge'),
+    path              = require('path'),
+    webpack           = require('webpack'),
+    OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 /* PostCSS Plugins */
-var postcssImport = require('postcss-import'),
-postcssPrecss = require('precss'),
-postcssAutoprefixer = require('autoprefixer'),
-postcssNested = require('postcss-nested'),
-postcssLost = require('lost'),
-postcssRucksack = require('rucksack-css');
+var postcssImport       = require('postcss-import'),
+    postcssPrecss       = require('precss'),
+    postcssAutoprefixer = require('autoprefixer'),
+    postcssNested       = require('postcss-nested'),
+    postcssLost         = require('lost'),
+    postcssRucksack     = require('rucksack-css');
 
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);

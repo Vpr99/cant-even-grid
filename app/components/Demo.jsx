@@ -5,7 +5,7 @@ import range from 'lodash/utility/range';
 
 const Demo = React.createClass({
   getInitialState() {
-    return {x: 250, y: 300};
+    return {x: 0, y: 0};
   },
 
   componentDidMount() {
