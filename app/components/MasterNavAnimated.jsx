@@ -24,6 +24,7 @@ const MasterNavAnimated = React.createClass({
 
   // actual animation-related logic
   getDefaultValue() {
+     console.log(this.state);
     const {pages} = this.state;
     return Object.keys(pages)
       .reduce((configs, id) => {

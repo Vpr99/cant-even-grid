@@ -45,6 +45,7 @@ h1{
     }
 
     li > a{
+        transition: all 0.2s ease;
         opacity: 0.6;
     }
 

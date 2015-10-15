@@ -1,14 +1,16 @@
 var HtmlwebpackPlugin = require('html-webpack-plugin'),
-    merge = require('webpack-merge'),
-    path = require('path'),
-    webpack = require('webpack'),
-    OpenBrowserPlugin = require('open-browser-webpack-plugin');
+merge = require('webpack-merge'),
+path = require('path'),
+webpack = require('webpack'),
+OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 /* PostCSS Plugins */
 var postcssImport = require('postcss-import'),
-    postcssNested = require('postcss-nested'),
-    postcssLost = require('lost'),
-    postcssRucksack = require('rucksack-css');
+postcssPrecss = require('precss'),
+postcssAutoprefixer = require('autoprefixer'),
+postcssNested = require('postcss-nested'),
+postcssLost = require('lost'),
+postcssRucksack = require('rucksack-css');
 
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
@@ -22,7 +24,7 @@ var common = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
+                test: /\.css$/,/\.css$/,
                 loader: "style-loader!css-loader?minimize!postcss-loader",
                 include: path.resolve(ROOT_PATH, 'app')
             }
@@ -35,13 +37,15 @@ var common = {
     postcss: function () {
         return [
             postcssImport({
-                  onImport: function (files) {
-                      files.forEach(this.addDependency);
-                  }.bind(this)
-              }),
-              postcssNested(),
-              postcssRucksack(),
-              postcssLost()
+                onImport: function (files) {
+                    files.forEach(this.addDependency);
+                }.bind(this)
+            }),
+            postcssPrecss(),
+            postcssAutoprefixer(),
+            postcssNested(),
+            postcssRucksack(),
+            postcssLost()
         ];
     },
     plugins: [
@@ -59,7 +63,7 @@ if(TARGET === 'start' || !TARGET) {
         module: {
             loaders: [
                 {
-                    test: /\.jsx?$/,
+                    test: /\.jsx?$/,/\.jsx?$/,
                     loaders: ['babel'],
                     include: path.resolve(ROOT_PATH, 'app')
                 }
