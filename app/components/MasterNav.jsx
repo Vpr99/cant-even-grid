@@ -1,20 +1,68 @@
 import React from 'react';
+import {StaggeredMotion, spring} from 'react-motion';
+import _ from 'lodash';
+import range from 'lodash/utility/range';
 import { Link } from 'react-router';
 
-export default class MasterNav extends React.Component {
+const Links = [
+    {name: "Index", "url":"/"},
+    {name: "Grid", "url": "/grid"},
+    {name: "Navigation", "url":"/navigation"},
+    {name: "Tables", "url":"/tables"},
+    {name: "Typography", "url":"/typography"},
+    {name: "Lists", "url":"/lists"},
+    {name: "Dialogs", "url":"/dialogs"},
+    {name: "Helpers", "url":"/helpers"},
+    {name: "Forms", "url":"/forms"}
+];
+
+const MasterNavAnimated2 = React.createClass({
+    getInitialState() {
+        return {x: 0, opacity: 0};
+    },
+    componentDidMount() {
+        this.setState({
+            x: spring(0, [1000, 80]),
+            opacity: spring(1, [1000, 80])}
+        );
+    },
+    handleMouseDown() {
+        console.log('mouseDown');
+    },
+    getStyles(prevStyles) {
+        // `prevStyles` is the interpolated value of the last tick
+        const endValue = prevStyles.map((_, i) => {
+            return i === 0 ? this.state: {
+                x: spring(prevStyles[i - 1].x, [1000, 80]),
+                opacity: spring(prevStyles[i - 1].opacity, [1000, 80])
+            };
+        });
+        return endValue;
+    },
     render() {
-        return(
-                <ul className="MasterNav">
-                    <li><Link to="/">Index</Link></li>
-                    <li><Link to="/grid">Grid</Link></li>
-                    <li><Link to="/navigation">Navigation</Link></li>
-                    <li><Link to="/tables">Tables</Link></li>
-                    <li><Link to="/typography">Typography</Link></li>
-                    <li><Link to="/lists">Lists</Link></li>
-                    <li><Link to="/dialogs">Dialogs</Link></li>
-                    <li><Link to="/helpers">Helpers</Link></li>
-                    <li><Link to="/forms">Forms</Link></li>
-                </ul>
-        )
-    }
-}
+        return (
+            <StaggeredMotion defaultStyles={Links.map(() => ({x: -100, opacity: 0}))} styles={this.getStyles}>
+                {navListItems =>
+                    <div className="MasterNav" >
+                        {navListItems.map(({x, opacity}, i) =>
+                            <li className="navListItem"
+                                key={i}
+                                style={{
+                                    opacity: `${opacity}`,
+                                    transform: `translateX(${x + 0}px)`
+                                }}>
+                                <Link
+                                    to={Links[i].url}
+                                    className="navLink" >
+                                    {Links[i].name}
+                                </Link>
+                            </li>
+                         )}
+                     </div>
+                 }
+            </StaggeredMotion>
+        );
+    },
+});
+
+export default MasterNavAnimated2;
