@@ -4,6 +4,18 @@ import _ from 'lodash';
 import range from 'lodash/utility/range';
 import { Link } from 'react-router';
 
+const MasterNavLinks = [
+    {name: "Index", "url":"/"},
+    {name: "Grid", "url": "/grid"},
+    {name: "Navigation", "url":"/navigation"},
+    {name: "Tables", "url":"/tables"},
+    {name: "Typography", "url":"/typography"},
+    {name: "Lists", "url":"/lists"},
+    {name: "Dialogs", "url":"/dialogs"},
+    {name: "Helpers", "url":"/helpers"},
+    {name: "Forms", "url":"/forms"}
+];
+
 const MasterNavAnimated2 = React.createClass({
     getInitialState() {
         return {x: 0, opacity: 0};
@@ -29,7 +41,7 @@ const MasterNavAnimated2 = React.createClass({
     },
     render() {
         return (
-            <StaggeredMotion defaultStyles={range(7).map(() => ({x: -100, opacity: 0}))} styles={this.getStyles}>
+            <StaggeredMotion defaultStyles={MasterNavLinks.map(() => ({x: -100, opacity: 0}))} styles={this.getStyles}>
                 {navListItems =>
                     <div className="MasterNav" >
                         {navListItems.map(({x, opacity}, i) =>
@@ -40,9 +52,9 @@ const MasterNavAnimated2 = React.createClass({
                                     transform: `translateX(${x + 0}px)`
                                 }}>
                                 <Link
-                                    to="/"
+                                    to={MasterNavLinks[i].url}
                                     className="navLink" >
-                                    {x}
+                                    {MasterNavLinks[i].name}
                                 </Link>
                             </li>
                          )}
