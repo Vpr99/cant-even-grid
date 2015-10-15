@@ -23,6 +23,8 @@ html, body {
 h1{
     font-size: 4rem;
     font-weight: 100;
+    margin: 0;
+    padding: 0;
 }
 
 .App{
@@ -32,9 +34,15 @@ h1{
 .MasterNav{
     height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 7vh 0 0 0;
     list-style-type: none;
-    background-color: rgba(255,255,255,0.8);
+
+    &:hover{
+        background-color: rgba(255,255,255,0.8);
+    }
+    li{
+        position: relative;
+    }
 
     li > a{
         opacity: 0.6;
@@ -52,7 +60,6 @@ h1{
         letter-spacing: 0.05rem;
         color: #222;
         text-decoration: none;
-        transition: all 0.2s cubic-bezier(.27,.19,.36,.99);
 
         &:hover{
             color: #444;
@@ -60,6 +67,10 @@ h1{
             opacity: 1 !important;
         }
     }
+}
+
+.Detail{
+    padding-top: 7vh;
 }
 
 
@@ -73,8 +84,8 @@ h1{
   }
   .demo1-ball {
     border-radius: 99px;
-    width: 50px;
-    height: 50px;
+    width:2.4rem;
+    height: 2.4rem;
     position: absolute;
     pointer-events: none;
   }
