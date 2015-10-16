@@ -2,8 +2,8 @@ $grid-columns: 12;
 
 .MasterDetailGrid{
     lost-utility: clearfix;
-    z-index: 9;
     @lost gutter 2vw;
+    z-index: 9;
 }
 .MasterNav{
     lost-utility: clearfix;
@@ -13,7 +13,6 @@ $grid-columns: 12;
     lost-utility: clearfix;
     lost-column: 10/12;
 }
-
 .grid-one{
     lost-utility: clearfix;
     opacity: 0.7;
@@ -22,8 +21,8 @@ $grid-columns: 12;
     &:hover{
         opacity: 1;
     }
-
-    div{
+    & > div{
+        position: relative !important;
         lost-column: 1/12;
         height: 50vh;
         background: orange;

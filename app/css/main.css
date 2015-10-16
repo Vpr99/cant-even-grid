@@ -40,27 +40,16 @@ h1{
     list-style-type: none;
     background: linear-gradient(to right, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0));
 
-    li{
-        position: relative;
-    }
-
-    li > a{
-        transition: all 0.2s ease;
-        opacity: 0.6;
-    }
-
-    &:hover li a{
-        opacity: 1;
-    }
-
     a {
         display: block;
         padding: 1rem 1.675rem;
+        transition: all 0.14s ease;
         font-size: responsive 0.7rem 1rem;
         font-weight: 500;
-        letter-spacing: 0.05rem;
         color: #222;
+        letter-spacing: 0.05rem;
         text-decoration: none;
+        opacity: 0.6;
 
         &:hover{
             color: #444;
@@ -74,7 +63,10 @@ h1{
     padding-top: 7vh;
 }
 
-
+.huh{
+    position: absolute;
+    width: 100%;
+}
 
 .demo1 {
     width: 100%;

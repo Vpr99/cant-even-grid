@@ -1,22 +1,22 @@
 import React from 'react'
-import { IndexRoute, Router, Route } from 'react-router'
 import MasterNav from './MasterNav'
-import Demo from './Demo'
+import { TransitionMotion, spring } from 'react-motion'
+import RouteTransition from './RouteTransition'
+import _ from 'lodash';
+import range from 'lodash/utility/range';
 
 let App = React.createClass({
     render() {
-        return (
-            <div className="App">
-                <Demo />
-                <section className="MasterDetailGrid">
-                    <MasterNav />
-                    <div className="Detail">
+        return <div className="App">
+            <section className="MasterDetailGrid">
+                <MasterNav />
+                <div className="Detail">
+                    <RouteTransition pathname={this.props.location.pathname} defaultStyles={{opacity: 0, scale: 0}}>
                         {this.props.children}
-                    </div>
-                </section>
-            </div>
-
-        );
+                    </RouteTransition>
+                </div>
+            </section>
+        </div>;
     }
 });
 
