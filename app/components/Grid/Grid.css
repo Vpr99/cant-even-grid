@@ -6,16 +6,16 @@ $grid-columns: 12;
     z-index: 9;
 }
 .MasterNav{
-    lost-utility: clearfix;
     lost-column: 2/12;
 }
 .Detail{
-    lost-utility: clearfix;
     lost-column: 10/12;
 }
-.grid-one{
+.grid-example{
     lost-utility: clearfix;
     opacity: 0.7;
+    padding: 1vw;
+    box-shadow: 0 0 0 2px #ccc inset;
     transition: all 0.2s cubic-bezier(.27,.19,.36,.99);
 
     &:hover{
@@ -23,7 +23,6 @@ $grid-columns: 12;
     }
     & > div{
         position: relative !important;
-        lost-column: 1/12;
         height: 50vh;
         background: orange;
         opacity: 0.2;
@@ -33,4 +32,19 @@ $grid-columns: 12;
             opacity: 0.7;
         }
     }
+}
+.grid-example-1 > div{
+    lost-column: 12/12;
+}
+.grid-example-2 > div{
+    lost-column: 6/12;
+}
+.grid-example-4 > div{
+    lost-column: 3/12;
+}
+.grid-example-6 > div{
+    lost-column: 2/12;
+}
+.grid-example-9 > div{
+    lost-column: 1/9;
 }
