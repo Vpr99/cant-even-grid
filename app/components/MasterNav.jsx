@@ -1,19 +1,18 @@
-import React from 'react';
-import {StaggeredMotion, spring} from 'react-motion';
-import _ from 'lodash';
-import range from 'lodash/utility/range';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { StaggeredMotion, spring } from 'react-motion';
+import _ from 'lodash';
 
 const NavLinks = [
-    {name: "Index", "url":"/"},
-    {name: "Grid", "url": "/grid"},
-    {name: "Navigation", "url":"/navigation"},
-    {name: "Tables", "url":"/tables"},
-    {name: "Typography", "url":"/typography"},
-    {name: "Lists", "url":"/lists"},
-    {name: "Dialogs", "url":"/dialogs"},
-    {name: "Helpers", "url":"/helpers"},
-    {name: "Forms", "url":"/forms"}
+    {label: "Index", "url":"/"},
+    {label: "Grid", "url": "/grid"},
+    {label: "Navigation", "url":"/navigation"},
+    {label: "Tables", "url":"/tables"},
+    {label: "Typography", "url":"/typography"},
+    {label: "Lists", "url":"/lists"},
+    {label: "Dialogs", "url":"/dialogs"},
+    {label: "Helpers", "url":"/helpers"},
+    {label: "Forms", "url":"/forms"}
 ];
 
 const MasterNav = React.createClass({
@@ -54,7 +53,7 @@ const MasterNav = React.createClass({
                                 <Link
                                     to={NavLinks[i].url}
                                     className="navLink" >
-                                    {NavLinks[i].name}
+                                    {NavLinks[i].label}
                                 </Link>
                             </li>
                          )}

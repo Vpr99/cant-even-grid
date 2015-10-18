@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
 
-export default class Lists extends React.Component {
+export default class Lists extends Component {
     render() {
         return(
-            <h1>Lists</h1>
+            <SpringText text="Lists" />
         )
     }
 }

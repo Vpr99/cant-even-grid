@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from './SpringText';
 
-export default class Helpers extends React.Component {
+export default class Helpers extends Component {
     render() {
         return(
-            <h1>Helpers</h1>
+            <SpringText text="Helpers" />
         )
     }
 }

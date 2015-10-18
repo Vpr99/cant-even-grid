@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
 
-export default class Dialogs extends React.Component {
+export default class Dialogs extends Component {
     render() {
         return(
-            <h1>Dialogs</h1>
+            <SpringText text="Dialogs" />
         )
     }
 }

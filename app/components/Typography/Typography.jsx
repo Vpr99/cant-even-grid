@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
+
 /*@import './Typography.css';*/
-export default class Typography extends React.Component {
+
+export default class Typography extends Component {
     render() {
         return(
-            <h1>Typography</h1>
+            <SpringText text="Typography" />
         )
     }
 }

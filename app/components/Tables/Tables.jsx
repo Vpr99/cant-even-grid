@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
 
-export default class Tables extends React.Component {
+export default class Tables extends Component {
     render() {
         return(
-            <h1>Tables</h1>
+            <SpringText text="Tables" />
         )
     }
 }

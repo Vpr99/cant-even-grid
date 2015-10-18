@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import _ from 'lodash';
+import SpringText from '../Helpers/SpringText';
 
-export default class Grid extends React.Component {
+export default class Grid extends Component {
     render() {
+        console.log(SpringText)
         return(
             <div>
-                <h1>Grid System</h1>
+                <SpringText text="Grid" />
                 <h2>Grid sizes</h2>
                 <h3>Size 1 of 1</h3>
                 <section className="grid-example grid-example-1">

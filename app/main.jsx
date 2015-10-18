@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 
 import createBrowserHistory from 'history/lib/createBrowserHistory';

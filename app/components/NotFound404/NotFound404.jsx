@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
 
-export default class NotFound404 extends React.Component {
+export default class NotFound404 extends Component {
     render() {
         return(
-            <h1>Nothin here, boss!</h1>
+            <SpringText text="Nothin' here, boss!" />
         )
     }
 }

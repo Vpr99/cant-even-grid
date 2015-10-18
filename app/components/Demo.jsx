@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {StaggeredMotion, spring} from 'react-motion';
 import _ from 'lodash';
 import range from 'lodash/utility/range';

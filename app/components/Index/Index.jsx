@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SpringText from '../Helpers/SpringText';
 
-export default class Index extends React.Component {
+export default class Index extends Component {
     render() {
         return(
-            <div>
-                <h1>Index</h1>
-            </div>
+            <SpringText text="Index" />
         )
     }
 }
